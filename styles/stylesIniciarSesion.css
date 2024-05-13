@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background: linear-gradient(0deg, rgba(53,52,206,1) 0%, rgba(11,11,39,1) 80%, rgba(0,0,0,1) 100%);
+}
+
+
+.contenedor-padre {
+    display: flex;
+    height: 100%; /* Ajusta la altura del contenedor padre */
+    
+}
+
+.imagen{
+  background-image: url(/assets/photos/IniciarSession/ai-generated-8697246_1920.jpg);
+  opacity: 0.7;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  box-shadow: 12px 2px 43px rgb(0, 119, 255);
+  
+}
+
+.name{
+    color: rgb(255, 255, 255);
+    position: absolute;
+    font-size: 40px;
+    font-family: 'Open Sans';
+    left: 50px;
+    top: 40px;
+    letter-spacing: 2px;
+}
+
+
+.contenedor{
+    background-color:rgba(59, 58, 58, 0.089);
+    width: 500px;
+    padding: 20px;
+    height: 100%;
+    margin-left: auto; /* Mueve el contenedor hacia la derecha */
+    margin-right: 0;  
+    
+}
+
+.contenedor .formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+    padding: 50px;
+}
+
+.formulario .iniciar{
+    color: white;
+    font-size: 40px;
+    font-family: 'Archivo black';
+    margin-top: 100px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+    align-self: center;
+    
+}
+
+.formulario .texto{
+    color: white;
+    font-size: 15px;
+    font-family:'Roboto';
+    text-align: center;
+    
+}
+
+.formulario .input-container {
+    position: relative;
+    
+}
+.formulario .input-container input{
+    width: 100%;
+    
+}
+
+
+.formulario .input-container i {
+    position: absolute;
+    bottom: 16px;
+    right: 22px;
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+.formulario .controls{
+    position: relative;
+    padding: 11px;
+    height: 50px;
+    margin-top: 30px;
+    font-size: 12px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.144);
+    outline: 0;
+    
+}
+
+
+::-ms-reveal {
+   background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 3px currentColor;
+}
+
+.controls::placeholder{
+    color: white;
+}
+
+.formulario .resetPass{
+    color: white;
+    font-family:'Roboto';
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.resetPass:hover{
+    color: #9798a1;
+}
+
+.formulario .ingresar{
+    padding: 15px;
+    width: 320px;
+    margin:  0 auto 25px;
+    font-size: 15px;
+    font-family:'Roboto';
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+
+
+.formulario .linea{
+    background-color: rgb(255, 255, 255);
+    width: 352px;
+    height: 2px;
+    margin: 16px auto 0;
+    margin-bottom: 25px;
+}
+
+.formulario .registrar{
+    color: white;
+    font-size: 17px;
+    font-family:'Roboto';
+    text-align: center;
+    margin-top: 25px;
+}
+
+.formulario .registrar a{
+    color: rgb(140, 142, 252);
+    text-decoration: none;
+    
+}
+
+
+.ingresar{
+    text-decoration: none;
+    color: #030303;
+    border: 2px solid #fffcfc;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+  }
+  
+  
+  .ingresar span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  .ingresar:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #1529dfa4;
+    transition: all .35s;
+  }
+  
+  .ingresar:hover{
+    color: #fff;
+  }
+  
+  .ingresar:hover:after{
+    width: 100%;
+  }
+

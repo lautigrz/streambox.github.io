@@ -1,0 +1,366 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(146deg, rgb(0, 0, 0) 11%, rgba(43,40,191,1) 100%, rgba(3,2,8,1) 0%);
+}
+
+
+
+.menu {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    color: white;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.opciones {
+    /* Estilos para opciones */
+    display: flex;
+    gap: 25px;
+   
+
+}
+
+.opciones h4{
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 1em;
+    transition: transform 0.3s ease;
+}
+
+
+.opciones h4:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.buscador {
+    width: 30%;
+    height: 130%;
+    background-color: rgba(34, 32, 32, 0.452);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between; /* Distribuir el espacio entre los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+    border: 0px solid transparent; /* Asegúrate de establecer un borde inicial */
+    transition: background-color 0.5s ease, color 0.5s ease;
+    
+}
+
+
+
+.buscador:hover{
+    color: rgb(12, 12, 12);
+    background-color: rgba(255, 255, 255, 0.842);
+    
+}
+
+.buscador i {
+    margin-left: 16px;
+}
+
+.buscador input {
+    font-family: 'Roboto';
+    font-weight: 500;
+    margin: 0 auto; /* Eliminar el margen por defecto */
+    margin-left: 9px;
+    color: rgb(255, 255, 255);
+    width: 87%;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    transition: color 0.5s ease, color 0.5s ease;
+}
+
+.buscador input:hover{
+    color: black;
+}
+
+.buscador input::placeholder{
+    color:rgb(255, 255, 255)
+}
+.buscador input:hover::placeholder{
+    color:rgb(0, 0, 0)
+}
+
+
+.icons{
+    display: flex;
+    
+    gap: 50px;
+}
+.icons i {
+    /* Estilos para icons */
+    font-size: 1.4em;
+    color: rgb(255, 255, 255);
+    transition: transform 0.3s ease;
+}
+
+
+.icons i:hover{
+    transform: scale(1.4);
+}
+
+header{
+    position: relative;
+    background-image: url(../assets/photos/Peliculas/civilwar1.jpg);
+    width: 100%;
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85%; /* Altura del difuminado */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)); /* Gradiente lineal transparente a opaco */
+    pointer-events: none; /* Evita que el gradiente reciba eventos del ratón */
+}
+
+.contenido{
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    
+}
+
+.contenido-header{
+    
+    margin-left: 17px;
+    padding: 25px;
+    color: white;
+    width: 710px;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: justify;
+    gap: 10%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    
+    
+}
+
+.contenido-header .texto{
+    font-size: 95%;
+    font-family: 'Poppins';
+    letter-spacing: -1px;
+    font-weight:600;
+    padding-left: 50px;
+    padding-right: 50px;
+    
+}
+
+.contenido-header img {
+    
+    max-width: 35%; /* Establecer el ancho máximo al 100% */
+    height: auto;
+}
+
+.mirar{
+    width: 30%;
+    padding: 1%;
+    text-align: center;
+    margin: 0 auto;
+    background-color: white;
+    color: black;
+    font-size: 0.7em;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    border: 0px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contenido-header .mirar:hover{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.699);
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.primeros{
+  padding-left:3%;
+  padding-right: 3%;
+
+}
+.titleLanzamiento, .titlePelicula, .titleSerie, .titleHeroes{
+    color: white;
+    font-size: 22px;
+    text-align: left;
+    margin-top: 30px;
+    font-family: 'Open Sans';
+}
+
+
+.carteles{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3.5%;
+    
+}
+.cartel{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.cartel:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 0px 30px rgba(99, 193, 230, 0.747);
+}
+
+
+.cartelera{
+    position: relative;
+    width: 100%;
+}
+
+.number{
+    color: white;
+    font-size: 65%;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+.simb{
+    color: rgb(255, 255, 255);
+    font-size: 75%;
+}
+
+
+.porcentaje{
+    background: #160c4dd0;
+    border-radius: 50%;
+    border: 2px solid greenyellow; 
+    width: 31%;
+    height: 21%;
+    position: absolute;
+    right: -19%;
+    bottom: 87%;
+    display: flex; /* Agrega esta línea */
+    justify-content: center; /* Agrega esta línea */
+    z-index: 1;
+    align-items: center; 
+    transition: transform 0.5s ease;
+}
+.cartelera:hover .porcentaje {
+    transform: scale(1.2);
+}
+
+.piePagina{
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(10deg, rgb(0, 0, 0) 11%, rgb(28, 27, 134) 100%, rgba(3,2,8,1) 0%);
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 500px) and (min-width: 200px) {
+    .menu{
+    margin: 0;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: relative;
+    
+    }
+    .opciones{
+        font-size: 0.6em;
+        gap: 25px;
+    }
+
+    .icons {
+        font-size: 0.6em;
+        gap: 40px;
+        
+    }
+    .buscador{
+        position: absolute;
+        top: 110%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 65%;
+        height: 45%;
+
+    }
+    .buscador input, i{
+        font-size: 10px;
+    }
+    header{
+        background-position: center;
+        height: 75vh;    
+        
+    }
+    .contenido-header{
+        width: 100%;
+        height: 25em;
+        padding: 10px;
+        gap: 10%;
+        margin-left: 0;
+    }
+    .contenido-header .texto{
+        font-size: 0.8em;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .contenido-header img{
+        max-width: 60%;
+        margin-left: 10px;
+    }
+
+    .contenido-header .mirar{
+        margin-bottom: 25px;
+    }
+    .titleLanzamiento, .titlePelicula, .titleSerie, .titleHeroes{
+    font-size: 15px;
+}
+    .carteles{
+        width: 55em;
+        
+    }
+    .number{
+    font-size: 57%;
+    
+}
+.simb{
+    color: rgb(255, 255, 255);
+    font-size: 62%;
+}
+
+
+.porcentaje{
+    width: 27%;
+    height: 17%;
+    
+}
+
+    
+}

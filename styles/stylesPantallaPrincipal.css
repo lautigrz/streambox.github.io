@@ -295,24 +295,25 @@ header::after {
     .opciones{
         font-size: 0.7em;
         gap: 25px;
-        margin-left: 10px;
+        margin: 0 auto;
     }
 
-    .icons {
-        font-size: 0.7em;
-        gap: 40px;
-        margin-right: 10px;
+    .opciones h4{
         
     }
+
+    
     .buscador{
         position: absolute;
-        top: 110%;
+        top: 130%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 65%;
         height: 45%;
+        transition: none;
 
     }
+    
     .buscador input, i{
         font-size: 10px;
     }

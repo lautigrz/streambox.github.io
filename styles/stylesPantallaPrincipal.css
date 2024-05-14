@@ -295,11 +295,13 @@ header::after {
     .opciones{
         font-size: 0.7em;
         gap: 25px;
+        margin-left: 10px;
     }
 
     .icons {
         font-size: 0.7em;
         gap: 40px;
+        margin-right: 10px;
         
     }
     .buscador{

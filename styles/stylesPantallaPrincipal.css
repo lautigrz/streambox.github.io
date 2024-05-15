@@ -357,8 +357,7 @@ header::after {
     }
 
     .contenido-header .mirar:hover{
-        background-color: white;
-        color: black;
+        
         transform: none;
     }
     .titleLanzamiento, .titlePelicula, .titleSerie, .titleHeroes{

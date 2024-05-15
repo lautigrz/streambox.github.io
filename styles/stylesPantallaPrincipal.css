@@ -285,6 +285,7 @@ header::after {
 }
 
 @media only screen and (max-width: 500px) and (min-width: 200px) {
+
     .menu{
     margin: 0;
     padding-left: 8px;
@@ -321,7 +322,7 @@ header::after {
     .buscador input:hover{
         color: white;
     }
-}
+
     .buscador input:hover::placeholder{
     color:rgb(255, 255, 255)
     }
@@ -362,7 +363,7 @@ header::after {
     }
     .titleLanzamiento, .titlePelicula, .titleSerie, .titleHeroes{
     font-size: 15px;
-}
+    }
     .carteles{
         width: 55em;
         
@@ -392,5 +393,6 @@ header::after {
     .cartelera:hover .porcentaje {
         transform: none;
     }
+}
 
     

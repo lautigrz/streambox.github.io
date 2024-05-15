@@ -349,13 +349,16 @@ header::after {
         margin-left: 10px;
     }
 
-    .contenido-header .mirar{
+    .mirar{
         margin-bottom: 25px;
+        background-color: white;
+        color: black;
         
     }
 
     .contenido-header .mirar:hover{
-        
+        background-color: white;
+        color: black;
         transform: none;
     }
     .titleLanzamiento, .titlePelicula, .titleSerie, .titleHeroes{

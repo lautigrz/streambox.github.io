@@ -186,7 +186,7 @@ header::after {
     padding: 1%;
     text-align: center;
     margin: 0 auto;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: black;
     font-size: 0.7em;
     font-family: 'Open Sans';
@@ -297,7 +297,9 @@ header::after {
         gap: 25px;
         margin: 0 auto;
     }
-    
+    .opciones h4:hover{
+        transform: none;
+    }
     .buscador{
         position: absolute;
         top: 130%;
@@ -305,13 +307,25 @@ header::after {
         transform: translate(-50%, -50%);
         width: 65%;
         height: 45%;
-        transition: none;
 
+    }
+
+    .buscador:hover{
+        background-color: rgba(34, 32, 32, 0.452);
     }
     
     .buscador input, i{
         font-size: 10px;
+        color: white;
     }
+    .buscador input:hover{
+        color: white;
+    }
+}
+    .buscador input:hover::placeholder{
+    color:rgb(255, 255, 255)
+    }
+
     header{
         background-position: center;
         height: 75vh;    
@@ -334,8 +348,17 @@ header::after {
         margin-left: 10px;
     }
 
-    .contenido-header .mirar{
+    .mirar{
         margin-bottom: 25px;
+        background-color: white;
+        color: black;
+        
+    }
+
+    .contenido-header .mirar:hover{
+        background-color: white;
+        color: black;
+        transform: none;
     }
     .titleLanzamiento, .titlePelicula, .titleSerie, .titleHeroes{
     font-size: 15px;
@@ -344,21 +367,30 @@ header::after {
         width: 55em;
         
     }
+
+    .cartel{
+        transition: none;
+    }
+    .cartel:hover{
+        transform: none;
+        box-shadow: none;
+    }
     .number{
     font-size: 57%;
     
-}
-.simb{
+    }
+    .simb{
     color: rgb(255, 255, 255);
     font-size: 62%;
-}
-
-
-.porcentaje{
+    }
+    .porcentaje{
     width: 27%;
     height: 17%;
+   
     
-}
+    }
+    .cartelera:hover .porcentaje {
+        transform: none;
+    }
 
     
-}

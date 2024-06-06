@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-body {
+html,body {
     height: 100%;
     margin: 0;
     background: linear-gradient(0deg, rgba(53,52,206,1) 0%, rgba(11,11,39,1) 80%, rgba(0,0,0,1) 100%);
@@ -21,7 +21,7 @@ body {
 }
 
 .imagen{
-  background-image: url(/assets/photos/IniciarSession/ai-generated-8697246_1920.jpg);
+  background-image: url(../assets/photos/IniciarSession/ai-generated-8697246_1920.jpg);
   opacity: 0.7;
   background-size: cover;
   height: 100%;
@@ -33,18 +33,18 @@ body {
 .name{
     color: rgb(255, 255, 255);
     position: absolute;
-    font-size: 40px;
+    font-size: 2em;
     font-family: 'Open Sans';
-    left: 50px;
-    top: 40px;
+    left: 3%;
+    top: 7%;
     letter-spacing: 2px;
 }
 
 
 .contenedor{
-    background-color:rgba(59, 58, 58, 0.089);
-    width: 500px;
-    padding: 20px;
+    background-color:rgba(185, 21, 21, 0.089);
+    width: 39%;
+    padding: 0.8%;
     height: 100%;
     margin-left: auto; /* Mueve el contenedor hacia la derecha */
     margin-right: 0;  
@@ -56,15 +56,15 @@ body {
     flex-direction: column;
     justify-content: center;
     background-color: transparent;
-    padding: 50px;
+    padding: 2.8em;
 }
 
-.formulario .iniciar{
+.iniciar{
     color: white;
-    font-size: 40px;
+    font-size: 2.0em;
     font-family: 'Archivo black';
-    margin-top: 100px;
-    margin-bottom: 30px;
+    margin-top: 1%;
+    margin-bottom: 2%;
     justify-content: flex-start;
     align-self: center;
     
@@ -72,7 +72,7 @@ body {
 
 .formulario .texto{
     color: white;
-    font-size: 15px;
+    font-size: 0.8em;
     font-family:'Roboto';
     text-align: center;
     
@@ -84,26 +84,16 @@ body {
 }
 .formulario .input-container input{
     width: 100%;
-    
+    height: 100%;
 }
-
-
-.formulario .input-container i {
-    position: absolute;
-    bottom: 16px;
-    right: 22px;
-    color: rgb(255, 255, 255);
-}
-
 
 
 
 .formulario .controls{
     position: relative;
-    padding: 11px;
-    height: 50px;
-    margin-top: 30px;
-    font-size: 12px;
+    padding: 4%;
+    margin-top: 10%;
+    font-size: 0.8em;
     border: 1px solid gray;
     border-radius: 6px;
     color: white;
@@ -127,7 +117,8 @@ body {
 .formulario .resetPass{
     color: white;
     font-family:'Roboto';
-    margin-top: 15px;
+    font-size: 0.9em;
+    margin-top: 0.9em;
     margin-bottom: 20px;
     text-decoration: none;
 }
@@ -137,8 +128,9 @@ body {
 }
 
 .formulario .ingresar{
-    padding: 15px;
-    width: 320px;
+    padding: 4%;
+    width: 90%;
+   
     margin:  0 auto 25px;
     font-size: 15px;
     font-family:'Roboto';
@@ -207,3 +199,9 @@ body {
     width: 100%;
   }
 
+  @media screen and (max-width: 768px) {
+    .contenedor {
+        width: 70%; /* Cambia el ancho del contenedor en pantallas más pequeñas */
+    }
+
+  }

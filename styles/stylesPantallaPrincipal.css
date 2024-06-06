@@ -276,14 +276,50 @@ header::after {
 .cartelera:hover .porcentaje {
     transform: scale(1.2);
 }
-
-.piePagina{
-    width: 100%;
-    height: 220px;
-    background: linear-gradient(10deg, rgb(0, 0, 0) 11%, rgb(28, 27, 134) 100%, rgba(3,2,8,1) 0%);
-    margin-top: 40px;
+.dropdown{
+    display: none;
 }
 
+.piePagina {
+    background: linear-gradient(10deg, rgb(0, 0, 0) 11%, rgb(28, 27, 134) 100%, rgba(3,2,8,1) 0%);
+    color: rgb(209, 203, 203);
+    padding: 20px;
+    height: 30vh;
+    margin-top:5vh ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    font-size: 24px;
+    gap:20px;
+    transition: transform 0.3s ease;
+    
+}
+
+.icon i {
+    margin-left: 10px;
+    color: white;
+}
+
+.icon i:hover {
+    transform: scale(1.2);
+}
+
+.politcs ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.politcs ul li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+}
 @media only screen and (max-width: 500px) and (min-width: 200px) {
 
     .menu{
@@ -393,6 +429,57 @@ header::after {
     .cartelera:hover .porcentaje {
         transform: none;
     }
+
+    .icons{
+        display: none;
+    }
+
+    .iconResponsive i{
+        display: flex;
+        position: absolute;
+        right: 20px;
+        bottom: 13px;
+        background-color: rgba(31, 28, 34, 0.521);
+        border-radius: 45%;
+    }
+    .iconResponsive i{
+        font-size: 1em;
+        padding: 6px;
+    }
+    .piePagina{
+        display: flex;
+        height: 25vh;
+       
+    }
+    .icon{
+        gap: 5px;
+    
+    }
+
+    .icon i{
+        font-size: 0.8em;
+    }
+
+    .icon i:hover{
+        transform: none;
+    }
+
+    .politcs{
+        margin-left: 15%;
+    }
+
+
+    .politcs ul{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: justify;
+        gap: 5px;
+    }
+
+    
+    
 }
 
     

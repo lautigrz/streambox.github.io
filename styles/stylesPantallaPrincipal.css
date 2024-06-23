@@ -10,7 +10,7 @@
 }
 
 body {
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background: linear-gradient(146deg, rgb(0, 0, 0) 11%, rgba(43,40,191,1) 100%, rgba(3,2,8,1) 0%);
 }
@@ -125,7 +125,7 @@ header{
     background-size: cover;
     display: flex;
     flex-direction: column;
-    
+   
     
 }
 
@@ -139,6 +139,10 @@ header::after {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5)); /* Gradiente lineal transparente a opaco */
     pointer-events: none; /* Evita que el gradiente reciba eventos del ratón */
 }
+.header-hide::after {
+    display: none;
+}
+
 
 .contenido{
     position: absolute;
@@ -203,47 +207,55 @@ header::after {
     transform: scale(1.2);
     cursor: pointer;
 }
+main{
+    flex: 1; /* Ocupa todo el espacio restante */
+    transition: margin-top 0.3s ease; /* Transición suave para el movimiento */
+    margin-top: 0;
+}
 
 .primeros{
   padding-left:3%;
   padding-right: 3%;
 
 }
-.titleLanzamiento, .titlePelicula, .titleSerie, .titleHeroes{
+.title{
     color: white;
     font-size: 22px;
     text-align: left;
     margin-top: 30px;
+    margin-left: 20px;
     font-family: 'Open Sans';
 }
 
 
 .carteles{
     width: 100%;
-    margin-top: 30px;
+    padding: 20px 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 3.5%;
+    
+   
     
 }
-.cartel{
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-.cartel:hover{
-    transform: scale(1.2);
-    box-shadow: 0px 0px 30px rgba(99, 193, 230, 0.747);
-}
-
 
 .cartelera{
     position: relative;
     width: 100%;
+    transition: .3s ease all;
+
+}
+.cartel{
+   
+    width: 75%;
+    height: 100%;
+    border-radius: 15px;
+    
+}
+
+.cartelera.hover{
+    transform: scale(1.1);
+    transform-origin: center;
+    z-index: 10;
 }
 
 .number{
@@ -257,25 +269,26 @@ header::after {
     font-size: 75%;
 }
 
-
 .porcentaje{
     background: #160c4dd0;
     border-radius: 50%;
     border: 2px solid greenyellow; 
-    width: 31%;
-    height: 21%;
+    width: 22%;
+    height: 18%;
     position: absolute;
-    right: -19%;
+    left: 60%;
     bottom: 87%;
     display: flex; /* Agrega esta línea */
     justify-content: center; /* Agrega esta línea */
-    z-index: 1;
+    z-index: 991;
     align-items: center; 
-    transition: transform 0.5s ease;
+   
+    
 }
-.cartelera:hover .porcentaje {
-    transform: scale(1.2);
+.cartelera .porcentaje {
+    transform: scale(1.1);
 }
+
 
 .piePagina{
     width: 100%;
@@ -283,6 +296,7 @@ header::after {
     background: linear-gradient(10deg, rgb(0, 0, 0) 11%, rgb(28, 27, 134) 100%, rgba(3,2,8,1) 0%);
     margin-top: 40px;
 }
+
 
 @media only screen and (max-width: 500px) and (min-width: 200px) {
 
@@ -380,16 +394,20 @@ header::after {
     font-size: 57%;
     
     }
+
+    .icons{
+        display: none;
+    }
     .simb{
     color: rgb(255, 255, 255);
     font-size: 62%;
     }
     .porcentaje{
-    width: 27%;
+    width: 22%;
     height: 17%;
-   
     
     }
+   
     .cartelera:hover .porcentaje {
         transform: none;
     }

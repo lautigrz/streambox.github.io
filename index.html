@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/stylesPantallaPrincipal.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/stylesSlider.css">
+    <link rel="stylesheet" href="styles/stylesPantallaPrincipal.css">
     <title>Pantalla Principal</title>
 </head>
 <body>
@@ -20,13 +22,13 @@
 
             <div class="buscador">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Buscar">
+                <input type="text" id="buscador" placeholder="Buscar">
             </div>
 
             <div class="icons">
-               <!--- <a href="" class="perfil"><i class="fa-solid fa-user"></i></a>
+               <a href="" class="perfil"><i class="fa-solid fa-user"></i></a>
                 <a href="" class="notificaciones"><i class="fa-solid fa-bell"></i></a>
-                <a href="" class="ajustes"><i class="fa-solid fa-gear"></i></a>--->
+                <a href="" class="ajustes"><i class="fa-solid fa-gear"></i></a>
             </div>
         </nav>
 
@@ -44,35 +46,35 @@
     </header>
 
     <main class="primeros">
-        <h3 class="titleLanzamiento">Ultimos lanzamientos</h3>
+        <h3 class="title">Ultimos lanzamientos</h3>
         <div class="carteles">
 
             <div class="cartelera">
                 <div class="porcentaje">
                     <span class="number">65<span class="simb">%</span> </span>
                 </div>
-                  <a href=""><img class="cartel" src="./assets/photos/Peliculas/duna.jpg" alt=""></a>
+                  <a href=""><img class="cartel" src="./assets/photos/Peliculas/duna.jpg" alt="duna"></a>
                 </div>
                 
             <div class="cartelera"></a>
                 <div class="porcentaje">
                     <span class="number">85<span class="simb">%</span> </span>
                 </div>
-                 <a href=""><img class="cartel" src="./assets/photos/Peliculas/barbie.jpg" alt=""></a>
+                 <a href=""><img class="cartel" src="./assets/photos/Peliculas/barbie.jpg" alt="barbie"></a>
                 </div>
         
             <div class="cartelera">
                  <div class="porcentaje">
                     <span class="number">85<span class="simb">%</span> </span>
-                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/oppenheimer.jpg" alt=""></a></div>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/oppenheimer.jpg" alt="oppenheimer"></a></div>
             
             <div class="cartelera"> <div class="porcentaje">
                     <span class="number">71<span class="simb">%</span> </span>
-                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/knuckles.jpg" alt=""></a></div>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/knuckles.jpg" alt="knuckles"></a></div>
             
             <div class="cartelera"> <div class="porcentaje">
                     <span class="number">63<span class="simb">%</span> </span>
-                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/monkeyman.jpg" alt=""></a></div>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/monkeyman.jpg" alt="monkeyman"></a></div>
             
             <div class="cartelera"> <div class="porcentaje">
                     <span class="number">81<span class="simb">%</span> </span>
@@ -85,9 +87,23 @@
             <div class="cartelera"> <div class="porcentaje">
                     <span class="number">79<span class="simb">%</span> </span>
                 </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/zonadeinteres.jpg" alt=""></a></div>
-            
+                <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">63<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/aquaman.jpg" alt=""></a></div>
+            <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">77<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/batman.jpg" alt=""></a></div>
+            <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">89<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/batmanCaballeroOscuro.jpg" alt=""></a></div>
+            <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">74<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/capAmericaCivilWar.jpg" alt=""></a></div>
         </div>
-        <h3 class="titlePelicula">Peliculas</h3>
+
+
+
+        <h3 class="title">Peliculas</h3>
         <div class="carteles">
             <div class="cartelera"> <div class="porcentaje">
                     <span class="number">92<span class="simb">%</span> </span>
@@ -115,10 +131,20 @@
                     <span class="number">49<span class="simb">%</span> </span>
                     
                 </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/halloweeen.jpg" alt=""></a></div>
-                    
+                <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">81<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/rebelmoon.jpg" alt=""></a></div>
+            
+            <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">67<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/aciegas.jpg" alt=""></a></div>
+            
+            <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">79<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/zonadeinteres.jpg" alt=""></a></div>
         </div>
         
-        <h3 class="titleSerie">Series</h3>
+        <h3 class="title">Series</h3>
         <div class="carteles">
             <div class="cartelera"> <div class="porcentaje">
                     <span class="number">94<span class="simb">%</span> </span>
@@ -145,9 +171,21 @@
             <div class="cartelera"> <div class="porcentaje">
                     <span class="number">94<span class="simb">%</span> </span>
                 </div> <a href=""><img class="cartel" src="./assets/photos/Series/vikings.jpg" alt=""></a></div>
+                <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">63<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/aquaman.jpg" alt=""></a></div>
+            <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">77<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/batman.jpg" alt=""></a></div>
+            <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">89<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/batmanCaballeroOscuro.jpg" alt=""></a></div>
+            <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">74<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/capAmericaCivilWar.jpg" alt=""></a></div>
         </div>
 
-        <h3 class="titleHeroes">SuperHeroes</h3>
+        <h3 class="title">SuperHeroes</h3>
         <div class="carteles">
             <div class="cartelera"> <div class="porcentaje">
                     <span class="number">63<span class="simb">%</span> </span>
@@ -173,12 +211,30 @@
             <div class="cartelera"> <div class="porcentaje">
                     <span class="number">75<span class="simb">%</span> </span>
                 </div> <a href=""><img class="cartel" src="./assets/photos/Peliculas/spiderMan.jpg" alt=""></a></div>
-            
+                <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">86<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Series/the.jpg" alt=""></a></div>
+            <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">75<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Series/theRain.jpg" alt=""></a></div>
+            <div class="cartelera"> <div class="porcentaje">
+                    <span class="number">94<span class="simb">%</span> </span>
+                </div> <a href=""><img class="cartel" src="./assets/photos/Series/vikings.jpg" alt=""></a></div>
         </div>
+
+        <article class="carteles" id="resultado">
+
+        </article>
     </main>
+
 
     <footer class="piePagina">
         dd
     </footer>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/stylesPerfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <title>Mi Perfil</title>
+    <link rel="icon" href="../assets/photos/icons/Streambox-2.ico">
+</head>
+<body>
+    <header>
+        
+        <nav class="menu">
+            <div class="atras">
+                <a href="pantallaPrincipal.html">Volver atras</a>
+            </div>
+        </nav>
+        
+    </header>
+
+    <div class="contenedor">
+        <div class="perfil">
+            <div class="perfil-header">
+                <img src="../img/GigaChad-meme-7.png" alt="perfil" class="foto-perfil">
+                <div class="titulo-perfil-contenedor">
+                <h2 class="titulo-perfil">Ricky123</h2>
+                </div>
+            </div>
+        </div>
+        
+
+        <form class="editar-cuenta" name ="form" id="form">
+            <div class="cuenta-header">
+                <h1 class ="cuenta-titulo">Ajustes de cuenta</h1>
+                <div class="cuenta-boton">
+                    <button id="guardar" class="boton-guardar" disabled >Guardar cambios</button>
+                    <button class ="boton-cancelar">Bajar Suscripción</button>
+                </div>
+            </div>
+
+
+            <div class="editor-cuenta">
+                <div class="input-container">
+                    <label>E-mail</label>
+                    <label>fgp_2001@hotmail.com</label>
+                </div>
+                <div class="input-container">
+                    <label>Contraseña</label>
+                    <label>******</label>
+                </div>
+            </div>
+
+            <div class="editor-cuenta">
+                <div class="input-container">
+                    <label>Nueva contraseña</label>
+                    <input type="password" id="contrasenia" placeholder="Ingrese nueva contraseña" required>
+                </div>
+                <div class="input-container">
+                    <label>Repetir contraseña</label>
+                    <input type="password" id="repetircontrasenia" placeholder="Ingrese nueva contraseña" required>
+                </div>
+            </div>
+                <h4>Metodo de pago</h4>
+            <div class="editor-cuenta">
+             
+                <div class="pago-container">
+                    <div class="input-opciones">
+                    <input type="radio" name="metodo-pago" value="1" id="tarjetaCredito">
+                    <label>Tarjeta de credito</label>
+                    </div>
+                    <div class="ingresar-tarjeta">
+                        <input type="numero-tarjeta" placeholder="Numero de tarjeta" id="numTarjeta">
+                        <input type="codigo-tarjeta" placeholder="XXX" id="claveTarjeta">
+                    </div>
+                </div> 
+                <div class="pago-container">
+                    <div class="input-opciones">
+                    <input type="radio" name="metodo-pago" value="2">
+                    <label>Cupon de pago</label>
+                    </div>
+                    <div class="cupon-seleccionar">
+                        <input type="checkbox" name="cupon" value="cupon1">
+                        <label>Pago Facil</label>
+                        <input type="checkbox" name="cupon" value="cupon2">
+                        <label>RapiPago</label>
+                    </div>
+                </div> 
+                <div class="pago-container">
+                    <div class="input-opciones">
+                    <input type="radio" name="metodo-pago" value="3">
+                    <label>Transferencia bancaria</label>
+                    </div>
+                    <div class="cbu">
+                        <label>CBU: 20215448611560306</label>
+                    </div>
+                </div> 
+            </div>
+        </form>
+    </div>
+
+    <script src="../js/miPerfilCodigo.js"></script>
+</body>
+</html>

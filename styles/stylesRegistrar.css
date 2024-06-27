@@ -17,8 +17,7 @@ html, body {
 .superior{
     display: flex;
     width: 100%;
-    height: 20%;
-    position: fixed;
+    
 }
 
 
@@ -33,8 +32,8 @@ html, body {
 
 .superior .iniciar{
     position:absolute;
-    color: #ffffff;
-    right: 20px;
+    color: hsl(0, 0%, 100%);
+    right: 10px;
     padding: 15px;
     text-decoration: none;
     font-size: 20px;
@@ -54,8 +53,8 @@ html, body {
             flex-direction: column;
             align-items: center;
             justify-content: center; /* Centrar verticalmente */
-            height: 200vh; 
-            margin-top: 23px;
+            height: auto;
+        
             font-family: 'Roboto';
             
 }
@@ -116,6 +115,19 @@ html, body {
     margin-top: 10px;
     width: 100%;
 }
+.error{
+    display: flex;
+    justify-content: space-between;
+}
+.error h3{
+  
+    color: rgb(214, 35, 35);
+    font-size: 17px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    margin-left: 13px;
+}
+
 
 
 
@@ -185,7 +197,7 @@ option {
     
 }
 .piePagina {
-    background-color: #0a117077;
+    background: linear-gradient(10deg, rgb(0, 0, 0) 11%, rgb(30, 28, 119) 100%, rgb(57, 33, 172) 0%);
     color: rgb(209, 203, 203);
     padding: 20px;
     height: 200px;
@@ -218,4 +230,54 @@ option {
     font-size: 16px;
   }
 
+  @media screen and (max-width: 768px) {
+    
+    .nuevaCuenta .titleCuenta{
+        font-size: 35px;
+        margin-top: 95px;
+    }
+    .superior .namePlataforma{
+        margin-top: 25px;
+        font-size: 25px;
+       
+    }
+
+    .superior .iniciar{
+        margin-top: 25px;
+        font-size: 25px;
+    }
+    .datosPersonales{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .datosPersonales input{
+        width: 80%;
+        
+    }
+
+    .plan{
+        width: 80%;
+    }
+
+    .datosBancarios {
+     padding: 50px;
+       
+    }
+    .datosBancarios .iconCard .tarjeta{
+        width: 95%;
+    }
+    .datosBancarios .iconCard i{
+        bottom: 63%;
+        right: 80px;
+    }
+    .politcs ul{
+        
+        text-align: left;
+        margin-left: 80px;
+    }
+
+  }
 

@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background: linear-gradient(1deg, rgba(53, 52, 206, 1) 0%, rgba(11, 11, 39, 1) 80%, rgba(0, 0, 0, 1) 100%);
+    color: white;
+    
+}
+
+p{
+    width: 600px;
+}
+.logo{
+    width: 200px;
+    height: auto;
+}
+.menu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    color: white;
+    padding: 10px 30px;
+}
+
+.opciones {
+    /* Estilos para opciones */
+    display: flex;
+    gap: 25px;
+}
+
+.opciones h4{
+    font-family: 'Poppins';
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.opciones h4:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+.opciones h4 a{
+    color: white;
+    text-decoration: none;
+}
+
+.buscador {
+    width: 35%;
+    height: 40px;
+    background-color: rgba(34, 32, 32, 0.452);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between; /* Distribuir el espacio entre los elementos */
+    align-items: center; /* Centrar verticalmente los elementos */
+    border: 0px solid transparent; /* Asegúrate de establecer un borde inicial */
+    transition: background-color 0.5s ease, color 0.5s ease;
+    
+}
+
+.buscador:hover{
+    color: rgb(12, 12, 12);
+    background-color: rgba(255, 255, 255, 0.842);
+    
+}
+
+.buscador i {
+    margin-left: 16px;
+}
+
+.buscador input {
+    font-family: 'Roboto';
+    font-weight: 500;
+    margin: 0 auto; /* Eliminar el margen por defecto */
+    margin-left: 9px;
+    color: rgb(255, 255, 255);
+    width: 87%;
+    height: 100%;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    transition: color 0.5s ease, color 0.5s ease;
+}
+
+.buscador input:hover{
+    color: black;
+}
+
+.buscador input::placeholder{
+    color:rgb(255, 255, 255)
+}
+.buscador input:hover::placeholder{
+    color:rgb(0, 0, 0)
+}
+
+.icons{
+    display: flex;
+    width: 180px;
+    gap: 30px;
+}
+.icons i {
+    /* Estilos para icons */
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    transition: transform 0.3s ease;
+}
+
+.icons i:hover{
+    transform: scale(1.4);
+}
+.serie-seleccionada{
+    display: flex;
+    gap: 20px;
+    padding: 0px 0px 20px 20px;
+    font-family: 'roboto';
+}
+.serie-seleccionada img{
+    margin-top: 30px;
+    width: 250px;
+    height: auto;
+    
+}
+.piePagina {
+    background: linear-gradient(10deg, rgb(11, 11, 11) 11%, rgb(35, 33, 186) 100%, rgb(46, 30, 122) 0%);
+    color: rgb(209, 203, 203);
+    padding: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    font-size: 24px;
+    gap:20px
+    
+}
+
+.icon i {
+    margin-left: 10px;
+    color: white;
+}
+
+.politcs ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.politcs ul li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+
+
+.estrellas-valoracion{
+    display: flex;
+    
+}
+
+.estrella-rate-1, .estrella-rate-2, .estrella-rate-3, .estrella-rate-4, .estrella-rate-5{
+    color: white;
+}
+
+.estrella-rate-1:hover, .estrella-rate-2:hover, .estrella-rate-3:hover, .estrella-rate-4:hover, .estrella-rate-5:hover{
+    color: orange;
+}
+
+/* Estilos básicos para el botón y el menú desplegable */
+.dropbtn {
+    background-color: #0000008c;
+    margin-bottom: 20px;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+  
+.dropdown {
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f900;
+    min-width: 160px;
+    
+    z-index: 1;
+    border-radius: 10px;
+}
+  
+.dropdown-content a {
+    background-color: #11165a;
+    color: rgb(255, 255, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+}
+  
+  .dropdown-content a:hover {
+    background-color: #1922a1;
+    border-radius: 10px;
+}
+  
+  /* Mostrar el menú desplegable cuando se pasa el ratón sobre el botón */
+  .dropdown:hover .dropdown-content {
+    display: block;
+    transform: translateY(-20px);
+}
+@media screen and (max-width: 768px) {
+
+    .menu{
+        margin: 0;
+        padding-left: 8px;
+        padding-right: 8px;
+        position: relative;
+        
+        }
+        .opciones{
+            font-size: 0.7em;
+            gap: 25px;
+            margin: 0 auto;
+            margin-bottom: 3px;
+        }
+        .opciones h4:hover{
+            transform: none;
+        }
+        .buscador{
+            position: absolute;
+            top: 115%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 65%;
+            height: 45%;
+            
+    
+        }
+    
+        .buscador:hover{
+            background-color: rgba(34, 32, 32, 0.452);
+        }
+        
+        .buscador input, i{
+            font-size: 10px;
+            color: white;
+        }
+        .buscador input:hover{
+            color: white;
+        }
+    
+        .buscador input:hover::placeholder{
+        color:rgb(255, 255, 255)
+        }
+
+        .icons{
+            display: none;
+        }
+        .serie-seleccionada{
+            display: flex;
+            flex-direction: column;
+            font-family: 'roboto';
+            margin-top: 10%;
+        }
+
+        .serie-seleccionada img{
+            width: 210px;
+        }
+        .serie-seleccionada .inicio{
+            width: 100%;
+            text-align: left;
+            font-size: 14px;
+        }
+        .temporadas {
+           display: flex;
+           flex-direction: row;
+           flex-wrap: wrap;
+        }
+      .dropbtn{
+        font-size: 12px;
+        width: 100px;
+        margin-left: 0;
+      }
+      .icon{
+        gap: 5px;
+    
+    }
+
+    .icon i{
+        font-size: 0.8em;
+    }
+
+    .icon i:hover{
+        transform: none;
+    }
+
+    .politcs{
+        margin-left: 15%;
+    }
+
+
+    .politcs ul{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: justify;
+        gap: 5px;
+    }
+
+
+    }

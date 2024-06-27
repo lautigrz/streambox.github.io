@@ -92,14 +92,32 @@ html,body {
 .formulario .controls{
     position: relative;
     padding: 4%;
-    margin-top: 10%;
+    margin-top: 7%;
     font-size: 0.8em;
     border: 1px solid gray;
     border-radius: 6px;
     color: white;
     background-color: rgba(128, 128, 128, 0.144);
     outline: 0;
+ 
     
+}
+
+.errorMail h3{
+    color: red;
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: 400;
+    margin-left: 3px;
+    font-family: 'Roboto';
+}
+.errorPass h3{
+    color: red;
+    font-size: 15px;
+    margin-top: 5px;
+    font-weight: 400;
+    margin-left: 3px;
+    font-family: 'Roboto';
 }
 
 
@@ -201,7 +219,28 @@ html,body {
 
   @media screen and (max-width: 768px) {
     .contenedor {
-        width: 70%; /* Cambia el ancho del contenedor en pantallas más pequeñas */
+        width: 100%; /* Cambia el ancho del contenedor en pantallas más pequeñas */
+        height: auto;
     }
 
+    .imagen{
+        display: none;
+    }
+    .contenedor .formulario{
+        margin-top: 25%;
+        padding: 3.8em;
+    }
+    .name{
+        display: none;
+    }
+    .formulario .linea{
+    width: 100%;
+    }
+    .ingresar:after{
+       display: none;
+      }
+      .ingresar:hover{
+        color: #444343;
+      }
+      
   }

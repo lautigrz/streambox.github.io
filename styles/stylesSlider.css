@@ -3,9 +3,9 @@
 {
     position: relative;
 
-    display: block;
+    display: flex;
     box-sizing: border-box;
-
+    width: 100%;
     -webkit-user-select: none;
        -moz-user-select: none;
         -ms-user-select: none;
@@ -47,19 +47,20 @@
          -o-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
             padding: 10px 0;
-            padding-left: 5px;
+            
+            width: 100%;
             
 }
 
 .slick-track
 {
     position: relative;
-    top: 0;
-    left: 0;
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    
+    display: flex; /* Ajuste para que los elementos se distribuyan correctamente */
+    justify-content: flex-start; /* Asegura que los elementos no estén centrados */
+    margin-left: 0; /* Elimina el centrado horizontal del track */
+    margin-right: 0; 
+    width: 80%;
 }
 .slick-track:before,
 .slick-track:after
@@ -92,6 +93,7 @@
 .slick-slide img
 {
     display: block;
+    width: 100%;
 }
 .slick-slide.slick-loading img
 {
@@ -103,7 +105,8 @@
 }
 .slick-initialized .slick-slide
 {
-    display: block;
+    display: flex;
+    width: 50%;
 }
 .slick-loading .slick-slide
 {

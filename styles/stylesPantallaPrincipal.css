@@ -22,7 +22,7 @@ body {
     justify-content: space-between; /* Espacio entre los elementos */
     align-items: center; /* Centra verticalmente los elementos */
     color: white;
-    padding: 20px;
+    padding: 20px 20px 0;
     margin-left: 40px;
     margin-right: 40px;
 }
@@ -101,7 +101,7 @@ body {
 
 .icons{
     display: flex;
-    
+    position: relative;
     gap: 50px;
 }
 .icons i {
@@ -109,6 +109,46 @@ body {
     font-size: 1.4em;
     color: rgb(255, 255, 255);
     transition: transform 0.3s ease;
+}
+
+.cerrarSession{
+    display: none;
+    backdrop-filter: blur(8px);
+    background: linear-gradient(146deg, rgba(0, 0, 0, 0.24) 11%, rgba(42, 40, 191, 0.349) 100%, rgba(3, 2, 8, 0.267) 0%);
+    width: 10%;
+    height: 15vh;
+    border-radius: 7%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    left: 89%;
+    top: 10%;
+    z-index: 100;
+}
+.cerrarSession.mostrar {
+    display: flex;
+    transition: all 0.9s ease;
+   
+}
+
+.cerrarSession a{
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Roboto';
+    color: white;
+    
+}
+
+.cerrarSession a:hover{
+    color: rgb(192, 175, 247);
+    
+}
+
+
+.iconResponsive{
+    display: none;
 }
 
 
@@ -208,9 +248,10 @@ header::after {
     cursor: pointer;
 }
 main{
-    flex: 1; /* Ocupa todo el espacio restante */
+    
     transition: margin-top 0.3s ease; /* Transición suave para el movimiento */
     margin-top: 0;
+    overflow: hidden;
 }
 
 .primeros{
@@ -222,34 +263,82 @@ main{
     color: white;
     font-size: 22px;
     text-align: left;
-    margin-top: 30px;
     margin-left: 20px;
     font-family: 'Open Sans';
+    margin-top: 20px;
+  
 }
 
+.title2{
+    color: white;
+    font-size: 22px;
+    text-align: left;
+    margin-left: 20px;
+    font-family: 'Open Sans';
+  
+}
 
-.carteles{
+.lupa{
+   position: relative;
+   margin-bottom: 25px;
+   display: none;
+}
+
+.lupa i{
+    color: white;
+    position: absolute;
+    left: 13%;
+    bottom: 8%;
+    font-size: 1.5em;
+
+}
+
+.carteles {
     width: 100%;
-    padding: 20px 0;
+    padding: 5px 0;
     display: flex;
     flex-direction: row;
-    
+    position: relative;
+ 
    
-    
 }
 
 .cartelera{
     position: relative;
     width: 100%;
     transition: .3s ease all;
-
 }
-.cartel{
+.cartelera img{
    
     width: 75%;
     height: 100%;
     border-radius: 15px;
+
     
+}
+
+#resultado{
+    
+    margin-top: 13px;
+    display: none;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    
+}
+
+#resultado .cartelera {
+
+    transition: .3s ease all;
+    margin-bottom: 25px;
+    max-width: 12%;
+   
+}
+
+
+#resultado .cartelera:hover{
+    transform: scale(1.1);
+    transform-origin: center;
+
 }
 
 .cartelera.hover{
@@ -298,7 +387,7 @@ main{
     color: rgb(209, 203, 203);
     padding: 20px;
     height: 30vh;
-    margin-top:5vh ;
+    margin-top:15vh ;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -334,7 +423,7 @@ main{
     font-size: 16px;
 }
 
-@media only screen and (max-width: 500px) and (min-width: 200px) {
+@media only screen and (max-width: 900px) and (min-width: 200px) {
 
     .menu{
     margin: 0;
@@ -347,17 +436,19 @@ main{
         font-size: 0.7em;
         gap: 25px;
         margin: 0 auto;
+        margin-bottom: 3px;
     }
     .opciones h4:hover{
         transform: none;
     }
     .buscador{
         position: absolute;
-        top: 130%;
+        top: 135%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 65%;
-        height: 45%;
+        height: 69%;
+        
 
     }
 
@@ -411,8 +502,8 @@ main{
         color: black;
         transform: none;
     }
-    .titleLanzamiento, .titlePelicula, .titleSerie, .titleHeroes{
-    font-size: 15px;
+    .title{
+    font-size: 1.2em;
     }
     .carteles{
         width: 55em;
@@ -443,7 +534,19 @@ main{
     height: 17%;
     
     }
-   
+
+    #resultado{
+        margin-top: 15%;
+        display: none;
+        width: 100%;
+       
+       
+    
+    }
+
+    #resultado .cartelera{
+        max-width: 25%;
+    }
     .cartelera:hover .porcentaje {
         transform: none;
     }
@@ -452,13 +555,20 @@ main{
         display: none;
     }
 
+    .iconResponsive{
+        display: flex;
+    }
     .iconResponsive i{
         display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
+        top: 95%;
         right: 20px;
         bottom: 13px;
-        background-color: rgba(31, 28, 34, 0.521);
+        background-color: rgba(73, 64, 82, 0.521);
         border-radius: 45%;
+        height: 5vh;
     }
     .iconResponsive i{
         font-size: 1em;

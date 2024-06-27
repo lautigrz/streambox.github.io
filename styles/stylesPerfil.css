@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+html, body {
+  
+    margin: 0;
+    background: linear-gradient(0deg, rgba(53,52,206,1) 0%, rgba(11,11,39,1) 80%, rgba(0,0,0,1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.menu {
+    display: flex;
+    color: white;
+    padding: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.atras{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #000000;
+    font-weight: bold;
+    background-color: #fffffff4;
+    border: 0;
+    border-radius: 19px;
+    width: 12%;
+    height: 6vh;
+    font-family: 'Roboto';
+}
+.atras a{
+    color: #000000;
+    padding: 10px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    
+}
+
+.atras:hover{
+    background-color: #d8d2d2;
+}
+
+
+.contenedor{
+    display: flex;
+    margin: 50px 10px;
+
+}
+
+.perfil{
+    flex: 1;
+    margin-right: 10px;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    border-radius: 18px;
+    height: max-content;
+    background-color: rgba(37, 32, 29, 0.404);
+    display: flex;
+}
+
+.perfil-header{
+    display: flex;
+    margin-left: 15px;
+    margin-right: 15px;
+    
+}
+
+.foto-perfil{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(255, 255, 255);
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+}
+
+.titulo-perfil-contenedor{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titulo-perfil{
+    font-family: 'Roboto';
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+}
+
+.editar-cuenta{
+    flex: 2;
+    margin-left: 10px;
+    background-color: white;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    border-radius: 12px;
+    height: max-content;
+    background-color: rgba(29, 37, 37, 0.404);
+}
+
+.cuenta-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 3px solid grey;
+
+}
+
+.cuenta-titulo{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.cuenta-boton{
+    margin-right: 5px;
+}
+
+.boton-guardar{
+    padding: 15px;
+    color: #000000;
+    font-weight: bold;
+    background-color: #5761e9f4;
+    border: 0;
+    border-radius: 19px;
+    width: 150px;
+    font-family: 'Roboto';
+}
+.boton-guardar:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.boton-cancelar{
+    padding: 15px;
+    color: #000000;
+    font-weight: bold;
+    background-color: rgb(219, 215, 215);
+    border: 0;
+    border-radius: 19px;
+    width: 150px;
+    font-family: 'Roboto';
+}
+
+.boton-cancelar:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+.editor-cuenta{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.input-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.input-container label{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    padding: 2px;
+}
+
+.input-container input{
+    font-family: "Roboto", sans-serif;
+    background-color: rgba(128, 128, 128, 0.281);
+    color: white;
+    height: 25px;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 5px;
+
+}
+
+h4{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 20px;
+    color: white;
+}
+
+.pago-container{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.pago-container label{
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    padding: 2px;
+}
+
+.input-opciones{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+.ingresar-tarjeta{
+    display: flex;
+    flex-direction: column;
+}
+
+.ingresar-tarjeta input{
+    font-family: "Roboto", sans-serif;
+    height: 25px;
+    width: 200px; 
+    margin-top: 15px;
+    border:0;
+    border-radius: 5px;
+    background-color: rgba(128, 128, 128, 0.281);
+    color: white;
+    padding: 5px;
+}
+
+.cupon-seleccionar{
+    display: flex;
+    flex-direction: column;
+}
+
+.cupon-seleccionar input{
+     margin-top: 5px;
+     border: 20px;
+     padding: 5px
+}
+
+.cbu{
+    margin-top: 20px;
+  
+
+}
+
+.piePagina {
+    background: linear-gradient(10deg, rgb(11, 11, 11) 11%, rgb(35, 33, 186) 100%, rgb(46, 30, 122) 0%);
+    color: rgb(209, 203, 203);
+    padding: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    font-size: 24px;
+    gap:20px
+    
+}
+
+.icon i {
+    margin-left: 10px;
+    color: white;
+}
+
+.politcs ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.politcs ul li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+}.piePagina {
+    background: linear-gradient(10deg, rgb(11, 11, 11) 11%, rgb(35, 33, 186) 100%, rgb(46, 30, 122) 0%);
+    color: rgb(209, 203, 203);
+    padding: 20px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    display: flex;
+    font-size: 24px;
+    gap:20px
+    
+}
+
+.icon i {
+    margin-left: 10px;
+    color: white;
+}
+
+.politcs ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.politcs ul li {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .menu{
+       display: none;
+        
+        }
+
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25%;
+    }
+    .editar-cuenta{
+        width: 100%;
+        height: 90vh;
+    }
+
+    .editar-cuenta .pago-container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 8px;
+    }
+    
+    .cuenta-header{
+        display: flex;
+    }
+    .cuenta-boton{
+        display: flex;
+        margin-top: 50%;
+        width: 80%;
+        margin-right: 25%;
+    }
+
+    .cuenta-header .cuenta-titulo {
+        display: flex;
+        font-size: 13px;
+        text-align: justify;
+        
+    }
+
+    .cupon-seleccionar{
+        display: flex;
+        flex-direction: row;
+        font-size: 17px;
+        
+    }
+    
+    .icon{
+        gap: 5px;
+    
+    }
+
+    .icon i{
+        font-size: 0.8em;
+    }
+
+    .icon i:hover{
+        transform: none;
+    }
+
+    .politcs{
+        margin-left: 15%;
+    }
+
+
+    .politcs ul{
+        color: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: justify;
+        gap: 5px;
+    }
+}

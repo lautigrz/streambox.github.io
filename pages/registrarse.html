@@ -3,33 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/stylesRegistrar.css">
+    <link rel="stylesheet" href="../styles/stylesRegistrar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" href="../assets/photos/icons/Streambox-2.ico">
     <title>Registrar</title>
 </head>
 <body>
 
     <nav class="superior">
         <h2 class="namePlataforma">StreamBox</h2>
-        <a href="iniciarSesion.html" class="iniciar">Iniciar Sesion</a>
+        <a href="../index.html" class="iniciar">Iniciar Sesion</a>
     </nav>
     
     <section class="nuevaCuenta">
         <h2 class="titleCuenta">Crear cuenta</h2>
         <h6 class="subtitulo">Usarás esto para ver en tus dispositivos favoritos</h6>
-        <form class="registrar">
+        <form action="../pages/pantallaPrincipal.html" class="registrar">
             
             <div class="datosPersonales">
             <h3 class="tituloPersonal">Datos personales</h3>
-            <input type="email"  class="controls" placeholder="Dirección de correo electrónico*" required>
-            <input type="email"  class="controls" placeholder="Confirmar correo electrónico*" required>
-            <input type="password" class="controls" placeholder="Ingrese contraseña*" required>
-            <input type="text" class="controls" placeholder="Nombre*">
-            <input type="text" class="controls" placeholder="Apellido*">
+            <input type="text" id="nombre" class="controls" placeholder="Nombre*">
+            <div class="error" id="errorNombre">
+                    
+            </div>
+            <input type="text" id="apellido" class="controls" placeholder="Apellido*">
+            <div class="error" id="errorApellido">
+                    
+            </div>
+            <input type="email" id="email" class="controls" placeholder="Dirección de correo electrónico*">
+            <div class="error" id="errorEmail">
+                    
+            </div>
+            <input type="email" id="emailRepeat" class="controls" placeholder="Confirmar correo electrónico*">
+            <div class="error" id="errorEmailRepeat">
+                    
+            </div>
+            <input type="password" id="contraseña" class="controls" placeholder="Ingrese contraseña*">
+            <div class="error" id="errorPass">
+                    
+            </div>
+          
             <h3 class="tituloPlan">Seleccione un plan</h3>
             
             <select class="plan">
-                <option value="" disabled selected>Seleccionar plan</option>
+                <option value="0" disabled selected>Seleccionar plan</option>
                 <option value="1">Básico con anuncios
                     $2.190,00/me
                     2 dispositivos a la vez
@@ -47,28 +64,39 @@
                             Resolución Full HD
                             30 descargas para disfrutar offline</option>
             </select>
+            <div class="error" id="errorPlan">
+                    
+            </div>
             
             </div>
 
             <div class="datosBancarios">
                 <h3 class="tituloBank">Datos bancarios</h3>
                 <div class="iconCard">
-                    <input type="text" class="tarjeta" placeholder="Numero de la tarjeta*" required>
+                    <input type="text" id="numeroTarjeta" class="tarjeta" placeholder="Numero de la tarjeta*">
                     <i class="fa-solid fa-credit-card"></i>
                 </div>
+
+                <div class="error" id="errorTarjeta"></div>
                 <div class="nombres">
-                <input type="text" placeholder="Nombre titular*" required>
-                <input type="text" placeholder="Apellido*" required>
+                <input type="text" id="nombreTitular" placeholder="Nombre titular*">
+                <input type="text" id="apellidoTitular" placeholder="Apellido*">
+            </div>
+            <div class="error" id="errorNombres">
+                    
             </div>
             <div class="seguridad">
-                <input type="text" class="bancario" placeholder="Codigo de seguridad">
+                <input type="text" id="codigoSeguridad" class="bancario" placeholder="Codigo de seguridad">
 
-                <input type="date" class="bancario" placeholder="Fecha de vencimiento*" required>
+                <input type="date" class="bancario" id="calendario" placeholder="Fecha de vencimiento*">
+            </div>
+            <div class="error" id="errorCode">
+                    
             </div>
             </div>
 
             <div class="bottons">
-                <button type="submit">Crear cuenta</button>
+                <button type="submit" id="botonConfirmar">Crear cuenta</button>
                 <button type="reset">Cancelar</button>
             </div>
             
@@ -96,5 +124,6 @@
         </div>
     </footer>
 
+    <script src="../js/scriptRegistrarse.js"></script>
 </body>
 </html>

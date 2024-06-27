@@ -560,14 +560,14 @@ main{
     }
 
     #resultado{
-        margin-top: 15%;
+        margin-top: 5%;
         display: none;
         width: 100%;
     }
 
     #resultado .cartelera{
         max-width: 25%;
-        display: none;
+        
     }
     .cartelera:hover .porcentaje {
         transform: none;

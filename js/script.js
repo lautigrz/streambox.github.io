@@ -294,7 +294,7 @@ valorUno.addEventListener("click", () =>{
     
     if(contenidoVisiblePelicula){
         contenido.style.display = "flex";
-        header.style.backgroundImage = "url(assets/photos/Peliculas/civilwar1.jpg)";
+        header.style.backgroundImage = "url(../assets/photos/Peliculas/civilwar1.jpg)";
         main.style.marginTop = "0";
         header.classList.remove("header-hide");
         lupa.style.display = "none";

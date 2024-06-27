@@ -563,13 +563,11 @@ main{
         margin-top: 15%;
         display: none;
         width: 100%;
-       
-       
-    
     }
 
     #resultado .cartelera{
         max-width: 25%;
+        display: none;
     }
     .cartelera:hover .porcentaje {
         transform: none;

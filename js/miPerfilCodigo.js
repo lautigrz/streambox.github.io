@@ -1,117 +1,101 @@
-function contraseñasCumplenRequisitos(contrasenia, repetirContrasenia) {
+document.addEventListener("DOMContentLoaded", function() {
+    let form = document.getElementById("form");
+    let passwordInput = document.getElementById("contrasenia");
+    let repeatPasswordInput = document.getElementById("repetircontrasenia");
+    let radios = document.querySelectorAll('input[type="radio"]');
+    let guardarButton = document.getElementById("guardar");
+    let cupones = document.querySelectorAll('input[name="cupon"]');
     
+
+    // Verifica que coincidan las contraseÃ±as
+    function contraseniasCoinciden() {
+        return passwordInput.value === repeatPasswordInput.value;
+    }
+
+    // Verifica la validez de las contraseÃ±as
+    function contraseniasSonValidas() {
+        let password = passwordInput.value;
     
-    /*Si son iguales*/
-    if (contrasenia !== repetirContrasenia) {
+        if (password.length < 8) {
+            return false;
+        }
+    
+        let letras = password.replace(/[^a-zA-Z]/g, "").length;
+        let numeros = password.replace(/[^0-9]/g, "").length;
+        let caracteresEspeciales = password.replace(/[a-zA-Z0-9]/g, "").length;
+        
+        return letras >= 2 && numeros >= 2 && caracteresEspeciales >= 2;
+    }
+
+    //Verifica que algun radio este sseleccionado
+    function algunRadioSeleccionado() {
+        for (let i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                if (radios[i].value === "2") { // Si es "CupÃ³n de pago"
+                    return algunCuponSeleccionado();
+                } 
+                return true;
+            }
+        }
         return false;
     }
-    /*Al menos 8 caracteres*/ 
-    if (contrasenia.length < 8 || repetirContrasenia.length < 8) {
-        return false;
+
+      // Verifica que al menos un cupon este seleccionado
+      function algunCuponSeleccionado() {
+        for (let i = 0; i < cupones.length; i++) {
+            if (cupones[i].checked) {
+                return true; 
+            }
+        }
+        return false; 
     }
 
-    /*2 letras, 2 nums y 2 caracteres especiales*/
-    let letras = contrasenia.match(/[a-zA-Z]/g);
-    let numeros = contrasenia.match(/[0-9]/g);
-    let especiales = contrasenia.match(/[!@#$%^&*(),.?":{}|<>]/g);
-
-    return letras && letras.length >= 2 &&
-           numeros && numeros.length >= 2 &&
-           especiales && especiales.length >= 2;
-}
-
-function validarTarjetaCredito(){
-    let numTarjeta = document.getElementById('numTarjeta').value.trim();
-    let claveTarjeta = document.getElementById('claveTarjeta').value.trim();
-    let botonGuardar = document.getElementById('guardar');
-
-    let longitudValida = numTarjeta.length >= 16 && numTarjeta.length <= 19;
-
-    /* 3 num distintos de cero*/
-    let claveValida = /^\d{3}$/.test(claveTarjeta) && claveTarjeta !== "000";
-
-    /*Validar par de la suma*/
-    let sumaNumeros = 0;
-    for (let i = 0; i < numTarjeta.length - 1; i++) {
-        sumaNumeros += parseInt(numTarjeta.charAt(i), 10);
+     // Guarde en el localStorage
+     function guardarMetodoPagoEnLocalStorage() {
+        
+        let metodoPagoSeleccionado = "";
+        for (let i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                metodoPagoSeleccionado = radios[i].value;
+                break;
+            }
+        }
+        
+        localStorage.setItem("metodoPago", metodoPagoSeleccionado);
     }
-    let ultimoDigito = parseInt(numTarjeta.charAt(numTarjeta.length - 1), 10);
-    let sumaEsImpar = sumaNumeros % 2 !== 0;
-
-    /* Verificar segun la suma*/ 
-    let queSeanPares = (sumaEsImpar && ultimoDigito % 2 === 0) ||
-                            (!sumaEsImpar && ultimoDigito % 2 !== 0);
-
-    /* Verifica para habilitar el botón*/
-    botonGuardar.disabled = !(longitudValida && claveValida && queSeanPares);
-}
-
-function habilitarEnvioFormulario() {
-    let contrasenia = document.getElementById('contrasenia').value;
-    let repetirContrasenia = document.getElementById('repetircontrasenia').value;
-    let radioButtons = document.querySelectorAll('input[type="radio"]');
-    let botonGuardar = document.getElementById('guardar');
-    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-    /* Verifica si las contraseñas coinciden y cumplen */
-    let contraseñasValidas = contraseñasCumplenRequisitos(contrasenia, repetirContrasenia);
-
-    /* Verifica si al menos un radio button está seleccionado*/
-    let algunSeleccionado = Array.from(radioButtons).some(radio => radio.checked);
-
-    /* Verifica si al menos un checkbox está seleccionado*/
-    let algunCheckboxSeleccionado = Array.from(checkboxes).some(checkbox => checkbox.checked);
-
-   /* Que se habilite o deshabilite si se cumplen o no las condiciones*/
-    botonGuardar.disabled = !(contraseñasValidas && algunSeleccionado && algunCheckboxSeleccionado);
-
-    let tarjetaCreditoForm = document.getElementById('ingresar-tarjeta');
-    let radioTarjetaCredito = document.getElementById('tarjetaCredito');
-
-    if (radioTarjetaCredito.checked) {
-        tarjetaCreditoForm.style.display = 'block';
-    } else {
-        tarjetaCreditoForm.style.display = 'none';
-        /* Resetear los campos de tarjeta de crédito al cambiar de opción*/
-        document.getElementById('numTarjeta').value = '';
-        document.getElementById('claveTarjeta').value = '';
+    // Habilite el guardado
+    function habilitarGuardar() {
+        if (contraseniasCoinciden() && contraseniasSonValidas() && algunRadioSeleccionado()) {
+            guardarButton.disabled = false;
+            guardarMetodoPagoEnLocalStorage(); 
+        } else {
+            guardarButton.disabled = true;
+        }
     }
 
-    /* Almacenar en localStorage el método de pago seleccionado y sus datos*/
-    let metodoPagoSeleccionado = Array.from(radioButtons).find(radio => radio.checked);
-    if (metodoPagoSeleccionado) {
-        let datosMetodoPago = {
-            metodoPago: metodoPagoSeleccionado.value,
-            numTarjeta: document.getElementById('numTarjeta').value,
-            claveTarjeta: document.getElementById('claveTarjeta').value
-        };
-        localStorage.setItem('metodoPago', JSON.stringify(datosMetodoPago));
-    }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    let radioButtons = document.querySelectorAll('input[type="radio"]');
-    let contraseniaInput = document.getElementById('contrasenia');
-    let repetirContraseniaInput = document.getElementById('repetircontrasenia');
-    let numTarjetaInput = document.getElementById('numTarjeta');
-    let claveTarjetaInput = document.getElementById('claveTarjeta');
-
-    let botonGuardar = document.getElementById('guardar');
-    let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-
-    radioButtons.forEach(radio => {
-        radio.addEventListener('change', habilitarEnvioFormulario);
+    
+    passwordInput.addEventListener("input", habilitarGuardar);
+    repeatPasswordInput.addEventListener("input", habilitarGuardar);
+    radios.forEach(radio => {
+        radio.addEventListener("change", habilitarGuardar);
     });
 
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', habilitarEnvioFormulario);
+    
+    cupones.forEach(cupon => {
+        cupon.addEventListener("change", habilitarGuardar);
     });
 
-    contraseniaInput.addEventListener('input', habilitarEnvioFormulario);
-    repetirContraseniaInput.addEventListener('input', habilitarEnvioFormulario);
-     numTarjetaInput.addEventListener('input', validarTarjetaCredito);
-     claveTarjetaInput.addEventListener('input', validarTarjetaCredito);
-    
-    
-    habilitarEnvioFormulario();
+ 
+    let metodoPagoGuardado = localStorage.getItem("metodoPago");
+    if (metodoPagoGuardado) {
+     
+     for (let i = 0; i < radios.length; i++) {
+         if (radios[i].value === metodoPagoGuardado) {
+             radios[i].checked = true;
+             break;
+         }
+     }
+    }
+
+    habilitarGuardar();
 });
